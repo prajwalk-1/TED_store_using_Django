@@ -1,6 +1,4 @@
 from django.contrib import admin
-
-# Register your models here.
 from .models import Product, ProductDetails, Tag
 
 class ProductAdmin(admin.ModelAdmin):
@@ -20,4 +18,3 @@ class ProductDetailsAdmin(admin.ModelAdmin):
 admin.site.register(Product, ProductAdmin)
 admin.site.register(ProductDetails, ProductDetailsAdmin)
 admin.site.register(Tag)
-
