@@ -10,6 +10,6 @@ class OrderView(APIView):
     def post(self, request):
         serializer = OrderSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save()  # Save the valid order data to the database
+            serializer.save()  
             return Response({"message": "Order added successfully"}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  # Return validation errors if the data is invalid
